@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <meta charset="utf-8" />
+    <title>MovieDB - Movie List</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+    <nav wicket:id="navigationPanel">
+        navigation links
+    </nav>
+</header>
+<h2>Movie List</h2>
+<table>
+    <tr wicket:id="movie_list">
+        <td>
+            <span wicket:id="title">title</span>
+            (<span wicket:id="year">year</span>)
+        </td>
+    </tr>
+</table>
+
+<footer>
+    <div id = "datetime" wicket:id = "datetime">date placed here</div>
+</footer>
+
+</body>
+</html>
