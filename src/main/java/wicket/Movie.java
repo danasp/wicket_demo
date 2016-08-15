@@ -3,19 +3,19 @@ package wicket;
 /**
  * Created by Danila on 07.08.2016.
  */
-public class Movies {
+public class Movie {
 
     private String title;
     private String year;
 
-    public Movies() {
+    public Movie() {
     }
 
-    public Movies(String title) {
+    public Movie(String title) {
         this.title = title;
     }
 
-    public Movies(String title, String year) {
+    public Movie(String title, String year) {
         this.title = title;
         this.year = year;
     }

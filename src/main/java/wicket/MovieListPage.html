@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:wicket="http://wicket.apache.org">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>MovieDB - Movie List</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 <header>
@@ -15,14 +15,16 @@
 <table>
     <tr wicket:id="movie_list">
         <td>
-            <span wicket:id="title">title</span>
-            (<span wicket:id="year">year</span>)
+            <a href="#" wicket:id="movies_link">
+                <span wicket:id="title">title</span>
+                (<span wicket:id="year">year</span>)
+            </a>
         </td>
     </tr>
 </table>
 
 <footer>
-    <div id = "datetime" wicket:id = "datetime">date placed here</div>
+    <div id="datetime" wicket:id="datetime">date placed here</div>
 </footer>
 
 </body>
