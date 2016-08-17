@@ -14,6 +14,7 @@ public class WicketApplication extends WebApplication {
     private MoviesCollection moviesCollection;
 
     public WicketApplication() {
+        init();
     }
 
     @Override

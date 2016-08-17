@@ -17,8 +17,10 @@ public class MovieListPage extends BasePage {
 
     public MovieListPage() {
 
-        // One way:
-        /*ListView<Movie> listView = new ListView<Movie>("movie_list", moviesCollection.getMovies()) {
+        add(new MovieListForm("movie_list_form"));
+
+        /*// One way:
+        ListView<Movie> listView = new ListView<Movie>("movie_list", moviesCollection.getMovies()) {
             @Override
             protected void populateItem(ListItem<Movie> item) {
                 Movie movie = item.getModelObject();
@@ -29,7 +31,7 @@ public class MovieListPage extends BasePage {
             }
         };*/
 
-        //Another way:
+        /*//Another way:
         PropertyListView<Movie> listView = new PropertyListView<Movie>("movie_list", moviesCollection.getMovies()) {
             @Override
             protected void populateItem(ListItem<Movie> item) {
@@ -39,7 +41,7 @@ public class MovieListPage extends BasePage {
                 movieLink.add(new Label("title"));
                 movieLink.add(new Label("year"));
             }
-        };
-        add(listView);
+        };*/
+//        add(listView);
     }
 }

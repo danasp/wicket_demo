@@ -24,5 +24,13 @@ public class NavigationPanel extends Panel {
                 setResponsePage(MovieListPage.class);
             }
         });
+
+        add(new Link("add_movie") {
+            @Override
+            public void onClick() {
+                Movie movie = new Movie();
+                setResponsePage(new MovieEditPage(movie));
+            }
+        });
     }
 }
