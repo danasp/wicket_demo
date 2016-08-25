@@ -25,4 +25,9 @@ public class MoviesCollection {
     public void deleteMovie(Movie movie) {
         movies.remove(movie);
     }
+
+    public void updateMovie(Movie movie) {
+        int index = movies.indexOf(movie);
+        movies.set(index, movie);
+    }
 }

@@ -9,8 +9,11 @@ import org.apache.wicket.model.CompoundPropertyModel;
  */
 public class MovieEditForm extends Form<Movie> {
 
-    public MovieEditForm(String id, Movie movie) {
+    private boolean isNew;
+
+    public MovieEditForm(String id, Movie movie, boolean isNew) {
         super(id);
+        this.isNew = isNew;
 
         CompoundPropertyModel<Movie> model = new CompoundPropertyModel<>(movie);
         this.setModel(model);
@@ -24,7 +27,13 @@ public class MovieEditForm extends Form<Movie> {
 
         WicketApplication app = (WicketApplication) this.getApplication();
         MoviesCollection movies = app.getMoviesCollection();
-        movies.addMovies(movie);
+
+        if (isNew) {
+            movies.addMovies(movie);
+        } else {
+            movies.updateMovie(movie);
+        }
+
         this.setResponsePage(new MovieListPage());
     }
 }

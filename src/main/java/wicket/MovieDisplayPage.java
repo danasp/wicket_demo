@@ -1,6 +1,7 @@
 package wicket;
 
 import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.model.PropertyModel;
 
 /**
  * Created by Danila on 15.08.2016.
@@ -8,7 +9,7 @@ import org.apache.wicket.markup.html.basic.Label;
 public class MovieDisplayPage extends BasePage {
 
     public MovieDisplayPage(Movie movie) {
-        add(new Label("title", movie.getTitle()));
-        add(new Label("year", movie.getYear()));
+        add(new Label("title", new PropertyModel<>(movie, "title")));
+        add(new Label("year", new PropertyModel<>(movie, "year")));
     }
 }

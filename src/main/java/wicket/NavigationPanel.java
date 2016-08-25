@@ -29,7 +29,7 @@ public class NavigationPanel extends Panel {
             @Override
             public void onClick() {
                 Movie movie = new Movie();
-                setResponsePage(new MovieEditPage(movie));
+                setResponsePage(new MovieEditPage(movie, true));
             }
         });
     }

@@ -5,8 +5,8 @@ package wicket;
  */
 public class MovieEditPage extends BasePage {
 
-    public MovieEditPage(Movie movie) {
+    public MovieEditPage(Movie movie, boolean isNew) {
         super();
-        add(new MovieEditForm("form", movie));
+        add(new MovieEditForm("form", movie, isNew));
     }
 }
